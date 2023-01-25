@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Freeverse QR Verifier</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        * {
+            font-family: Montserrat;
+        }
+        body {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Freeverse QR Verifier</h1>
+        <p>This app signs requests with the private key of user 0xFCCe52a778424605FCbc7f23F5B45fDC21551a9B</p>
+        <hr>
+        <p>Enter the asset ID to generate a verification QR code</p>
+        <form class="form" action="/scan" method="POST">
+            <input name="assetID" class="form-control" value="2539513970417005874714201112096857857338528033628" type="text" required>
+            <br>
+            <button type="submit" class="btn btn-primary" value="Get QR">Generate</button>
+        </form>
+    </div>
+</body>
+</html>

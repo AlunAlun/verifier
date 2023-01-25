@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Freeverse QR Verifier</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        * {
+            font-family: Montserrat;
+        }
+        body {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Freeverse QR Verifier</h1>
+        <hr>
+        <p>AssetID: <%=data.assetID%></p>
+        <p>Owner who signed: <%=data.sigOwnerID%></p>
+        <p>Freeverse API owner: <%=data.apiOwnerID%></p>
+        <hr>
+        <% if(data.serverAgrees){ %>
+            <div class="p-3 mb-2 bg-success text-white">Owner is verified!</div>
+        <% } else{ %>  
+            <div class="p-3 mb-2 bg-danger text-white">Owner is not verified!</div>
+        <% } %>
+        <a href="/"><button type="button" class="btn btn-primary">Back</button></a>
+    </div>
+</body>
+</html>
